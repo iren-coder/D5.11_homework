@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Library</title>
+</head>
+<body class="bg-light">   
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/publishers/">Издательства</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/author/create/">Создать автора</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/authors/">Список авторов</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/author/create_many/">Создать несколько авторов</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/author_book/create_many/">Создать несколько авторов и их книг</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/friends/">Список друзей и взятых ими книг</a>
+        </li>
+        <li class="menu__item">
+            <a class="nav-link" href="http://127.0.0.1:8000/friends/create/">Добавить друга</a>
+        </li>
+    </ul>
+</nav>
+    <form method="post">
+	    {% csrf_token %}
+	    {{ form.as_p }}
+	    <input type="submit" value="Сохранить">
+    </form>
+</body>
+</html>
